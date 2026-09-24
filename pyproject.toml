@@ -1,3 +1,4 @@
+
 [project]
 name = "blank-app"
 version = "0.1.0"
@@ -5,7 +6,9 @@ description = "Stock Price App"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-        "streamlit",
-            "yfinance"
+    "streamlit",
+    "yfinance",
+    "pandas",
+    "plotly"
 ]
 
