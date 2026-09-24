@@ -1,12 +1,11 @@
 [project]
-name = "blank-app-template"
+name = "blank-app"
 version = "0.1.0"
-description = "A simple Streamlit app template."
+description = "Stock Price App"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 dependencies = [
-    "streamlit>=1.61.1",
+        "streamlit",
+            "yfinance"
 ]
 
-[tool.uv]
-package = false
