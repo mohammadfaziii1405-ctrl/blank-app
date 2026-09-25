@@ -1,20 +1,19 @@
 import streamlit as st
+import pandas as pd
 
-st.set_page_config(page_title="Falak's App", page_icon="💖")
+st.set_page_config(page_title="Expense Tracker", layout="centered")
 
-st.title("Hi Falak! 💖")
-st.write("Ye tumhara naya app hai!")
-
+st.title("Professional Expense Tracker")
 st.divider()
 
-name = st.text_input("Tumhara naam kya hai?")
+amount = st.number_input("Amount", min_value=0.0, format="%.2f")
+category = st.selectbox("Category", ["Food", "Travel", "Shopping", "Bills", "Other"])
+date = st.date_input("Date")
 
-if st.button("Click Me"):
-    if name:
-        st.balloons()
-        st.success(f"Hello {name}! Tumhara app live ho gaya!")
-    else:
-        st.warning("Pehle naam toh likho Falak!")
+if st.button("Add Expense"):
+    st.success(f"Added: {category} - Rs. {amount} on {date}")
+    st.balloons()
 
-st.info("Made with love for Falak")                                                 
+st.divider()
+st.caption("Built with Streamlit | Professional Version")                                                 
                                                                                                                                                st.error("Ye symbol nahi mila! .NS laga                                                                                                                  
