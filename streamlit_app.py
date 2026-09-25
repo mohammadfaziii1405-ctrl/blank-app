@@ -1,19 +1,17 @@
-        import streamlit as st
-import pandas as pd
+import streamlit as st
 
-st.set_page_config(page_title="Expense Tracker", layout="centered")
-
-st.title("Professional Expense Tracker")
+st.title("Expense Tracker - Kotpura")
 st.divider()
+st.success("Kotpura App is Working!")
 
 amount = st.number_input("Amount", min_value=1)
-category = st.selectbox("Category", ["Food", "Travel", "Shopping", "Bills"])
-date = st.date_input("Date")
+category = st.selectbox("Category", 
+    ["Food", "Travel", "Shopping", "Bills", "Kotpura"])
+place = st.text_input("Place", "Kotpura")
 
 if st.button("Add Expense"):
-    st.success(f"Added: {category} - Rs. {amount}")
+    st.write("Added:", amount, category, place)
     st.balloons()
 
-st.divider()
-st.caption("Built with Streamlit | Professional App")
+st.caption("Built for Kotpura")
                                                                                                                                                st.error("Ye symbol nahi mila! .NS laga                                                         
